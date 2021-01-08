@@ -1,6 +1,9 @@
 const express = require("express");
 const axios = require("axios");
 
+const staffApiUrl = "http://localhost:8888/";
+const employmenApiUrl = "http://localhost:9876/";
+
 /*
 YAPILMASI GEREKENLER
 
@@ -12,20 +15,16 @@ YAPILMASI GEREKENLER
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("MERHABA STAFF");
-});
+//1) Çalışan Getir
+router.get("/", (req, res) => {});
 
-router.get("/employees", (req, res) => {
-  axios.get("http://localhost:8888/employees").then((data) => {
-    res.json(data.data);
-  });
-});
+//2) Çalışşan Ekle
+router.post("/", (req, res) => {});
 
-router.post("/employees", (req, res) => {
-  axios.post("http://localhost:8888/employees", req.body).then((data) => {
-    res.send("Eklendi");
-  });
-});
+//3) Çalışan Güncelle
+router.put("/:id", (req, res) => {});
+
+//4) Çalışan Sil
+router.delete("/:id", (req, res) => {});
 
 module.exports = router;

@@ -1,34 +1,34 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const axios = require("axios");
 
+/*
+YAPILMASI GEREKENLER
+
+1) Çalışan getir
+2) Çalışan ekle
+3) Çalışan güncelle
+4) Çalışan sil
+*/
+
+const databaseUrl = "http://localhost:3535/";
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-  res.send("H1 B1TCHES I'M STAFFAPI");
-});
+//1) Çalışan Getir
+app.get("/", (req, res) => {});
 
-const databaseUrl = "http://localhost:3535/";
+//2) Çalışan Ekle
+app.post("/", (req, res) => {});
 
-app.get("/employees", (req, res) => {
-  axios.get(databaseUrl).then((data) => {
-    res.json(data.data);
-  });
-});
+//3) Çalışan Güncelle
+app.put("/:id", (req, res) => {});
 
-app.post("/employees", (req, res) => {
-  const employe = {
-    id: req.body.id,
-    isim: req.body.isim,
-  };
-  employees.push(employe);
-  res.send("Eklendi");
-});
+//4) Çalışan Sil
+app.delete("/:id", (req, res) => {});
 
 const port = process.env.PORT || 8888;
 
