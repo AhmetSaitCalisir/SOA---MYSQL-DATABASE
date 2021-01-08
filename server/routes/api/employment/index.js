@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 
 const staffApiUrl = "http://localhost:8888/";
-const employmenApiUrl = "http://localhost:9876/";
+const employmentApiUrl = "http://localhost:9876/";
 
 /*
 YAPILMASI GEREKENLER
@@ -22,7 +22,16 @@ const router = express.Router();
 router.get("/", (req, res) => {});
 
 //1) Nöbet Getir
-router.get("/watch", (req, res) => {});
+router.get("/watch", (req, res) => {
+  axios
+    .get(`${employmentApiUrl}/watch`)
+    .then((result) => {
+      res.json(result.data);
+    })
+    .catch((err) => {
+      res.status(404).send("Nöbet verilerine ulaşılamadı");
+    });
+});
 
 //2) Nöbet Ata
 router.post("/watch", (req, res) => {});
@@ -34,7 +43,16 @@ router.put("/watch/:id", (req, res) => {});
 router.delete("/watch/:id", (req, res) => {});
 
 //5) Ameliyat Getir
-router.get("/operation", (req, res) => {});
+router.get("/operation", (req, res) => {
+  axios
+    .get(`${employmentApiUrl}/oparation`)
+    .then((result) => {
+      res.json(result.data);
+    })
+    .catch((err) => {
+      res.status(404).send("Ameliyat verilerine ulaşılamadı");
+    });
+});
 
 //6) Ameliyat Ata
 router.post("/operation", (req, res) => {});

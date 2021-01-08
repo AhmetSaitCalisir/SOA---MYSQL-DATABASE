@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 
 const staffApiUrl = "http://localhost:8888/";
-const employmenApiUrl = "http://localhost:9876/";
+const employmentApiUrl = "http://localhost:9876/";
 
 /*
 YAPILMASI GEREKENLER
@@ -16,7 +16,16 @@ YAPILMASI GEREKENLER
 const router = express.Router();
 
 //1) Çalışan Getir
-router.get("/", (req, res) => {});
+router.get("/", (req, res) => {
+  axios
+    .get(`${staffApiUrl}`)
+    .then((result) => {
+      res.json(result.data);
+    })
+    .catch((err) => {
+      res.status(404).send("Kişi verilerine ulaşılamadı");
+    });
+});
 
 //2) Çalışşan Ekle
 router.post("/", (req, res) => {});
