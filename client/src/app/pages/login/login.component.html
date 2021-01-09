@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-3">
+      <form (submit)="girisYap()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">TC Kimlik No</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            [(ngModel)]="tcKimlikNo"
+            name="tcKimlikNo"
+            pattern="[0-9]{11}"
+            maxlength="11"
+            minlength="11"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Kimlik bilgileriniz bizimle güvende</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            pattern="[0-9]{4}"
+            name="sifre"
+            [(ngModel)]="sifre"
+          />
+        </div>
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Giriş yap
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
