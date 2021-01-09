@@ -1,1 +1,56 @@
-<p>assing-operation works!</p>
+<!--
+Ameliyatlar
+  id
+  tarih
+  açıklama
+  doktor
+  birim
+
+Çalışan Bilgi
+  id
+  ad
+  soyad
+  ünvan
+  birim
+-->
+<!--
+    Birim
+    Doktor
+    Ameliyat Tarihi
+    Ameliyat Açıklaması
+-->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <form>
+        <div class="form-group">
+          <label for="birim">Birim</label>
+          <select class="form-control" id="birim">
+            <option>Dahiliye</option>
+            <option>Kadın Doğum</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="doktor">Doktor</label>
+          <select class="form-control" id="doktor">
+            <option>Ahmet Nuri Canseven</option>
+            <option>Cemile Canalan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="tarih">Tarih</label>
+            <input type="datetime-local" class="form-control" id="tarih" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="aciklama">Ameliyat Açıklaması</label>
+          <textarea class="form-control" id="aciklama" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Ameliyat Oluştur
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

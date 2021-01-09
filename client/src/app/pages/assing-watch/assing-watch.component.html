@@ -1,1 +1,58 @@
-<p>assing-watch works!</p>
+<!--
+    Çalışan Bilgi
+  id
+  ad
+  soyad
+  ünvan
+  birim
+
+    Nöbetler
+  id
+  tarih
+  çalışan
+  birim
+-->
+<!--
+    Birim
+    Ünvan
+    Çalışan
+    Tarih
+-->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <form>
+        <div class="form-group">
+          <label for="birim">Birim</label>
+          <select class="form-control" id="birim">
+            <option>Dahiliye</option>
+            <option>Kadın Doğum</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="unvan">Ünvan</label>
+          <select class="form-control" id="unvan">
+            <option>Doktor</option>
+            <option>Hemşire</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="calisan">Çalışan</label>
+          <select class="form-control" id="calisan">
+            <option>Ahmet Nuri Canseven</option>
+            <option>Cemile Canalan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="tarih">Tarih</label>
+            <input type="datetime-local" class="form-control" id="tarih" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Nöbet Oluştur
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

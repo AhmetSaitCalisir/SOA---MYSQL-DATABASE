@@ -9,12 +9,22 @@ import { FormsModule } from '@angular/forms';
 import { AssingWatchComponent } from './pages/assing-watch/assing-watch.component';
 import { AssingOperationComponent } from './pages/assing-operation/assing-operation.component';
 import { WatchComponent } from './pages/watch/watch.component';
-import { AperationComponent } from './pages/aperation/aperation.component';
 import { DayOffComponent } from './pages/day-off/day-off.component';
 import { StaffComponent } from './pages/staff/staff.component';
+import { OperationComponent } from './pages/operation/operation.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegistrationComponent, AssingWatchComponent, AssingOperationComponent, WatchComponent, AperationComponent, DayOffComponent, StaffComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegistrationComponent,
+    AssingWatchComponent,
+    AssingOperationComponent,
+    WatchComponent,
+    DayOffComponent,
+    StaffComponent,
+    OperationComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
