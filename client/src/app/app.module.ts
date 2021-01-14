@@ -12,6 +12,8 @@ import { WatchComponent } from './pages/watch/watch.component';
 import { DayOffComponent } from './pages/day-off/day-off.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { OperationComponent } from './pages/operation/operation.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AssingDayOffComponent } from './pages/assing-day-off/assing-day-off.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { OperationComponent } from './pages/operation/operation.component';
     DayOffComponent,
     StaffComponent,
     OperationComponent,
+    NavbarComponent,
+    AssingDayOffComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="navbar-brand">Hastane Sistemi</span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a routerLink="/login" class="nav-link">Oturum Aç</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownAmeliyat"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Ameliyatlar
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownAmeliyat"
+              >
+                <a routerLink="/operation" class="dropdown-item"
+                  >Ameliyatları Göster</a
+                >
+                <a routerLink="/assingoperation" class="dropdown-item"
+                  >Ameliyat Ata</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownNobet"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Nöbetler
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownNobet">
+                <a routerLink="/watch" class="dropdown-item"
+                  >Nöbetleri Göster</a
+                >
+                <a routerLink="/assingwatch" class="dropdown-item">Nöbet Ata</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownCalisan"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Çalışanlar
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownCalisan"
+              >
+                <a routerLink="/staff" class="dropdown-item"
+                  >Çalışanları Göster</a
+                >
+                <a routerLink="/registration" class="dropdown-item"
+                  >Yeni Çalışan</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                İzinler
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a routerLink="/dayoff" class="dropdown-item"
+                  >İzinleri Göster</a
+                >
+                <a routerLink="/assingdayoff" class="dropdown-item">İzin Ata</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<!--
+    İzinler
+  id
+  başlangıç tarih
+  bitiş tarih
+  kişi
+  onaylayan
+
+    Çalışan Bilgi
+  id
+  ad
+  soyad
+  ünvan
+  birim
+-->
+<!--
+    Birimi
+    Ünvanı
+    Kişi Adı
+    Başlangıç Tarihi
+    Bitiş Tarihi
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <div class="form-group">
+          <label for="birim">Birim</label>
+          <select class="form-control" id="birim">
+            <option>Kulak Burun Boğaz</option>
+            <option>Kardiyoloji</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="unvan">Ünvan</label>
+          <select class="form-control" id="unvan">
+            <option>Doktor</option>
+            <option>Hemşire</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="isim">İsim Soyisim</label>
+          <select class="form-control" id="isim">
+            <option>Ali Faruk Gülen</option>
+            <option>Ceyda Kelbaş</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="baslangic">Başlangıç Tarihi</label>
+            <input type="date" class="form-control" id="baslangic" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="bitis">Bitiş Tarihi</label>
+            <input type="date" class="form-control" id="bitis" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-success btn-block">
+          İzni Onayla
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-8">
+    <div class="col">
       <form>
         <div class="form-group">
           <label for="tcKimlik">Tc Kimlik No</label>
@@ -21,9 +21,11 @@
           <label for="anne">Anne Adı</label>
           <input type="text" class="form-control" id="anne" />
           <label for="baba">Baba Adı</label>
-          <input type="text" class="form-control" id="baba" />
           <label for="uyruk">Uyruk</label>
-          <input type="text" class="form-control" id="uyruk" />
+          <select class="form-control" id="uyruk">
+            <option>Türk</option>
+            <option>Yabancı</option>
+          </select>
           <label for="seri">Tc Kimlik Seri No</label>
           <input type="text" class="form-control" id="seri" />
         </div>
@@ -39,7 +41,6 @@
             <option>Kulak Burun Boğaz</option>
           </select>
         </div>
-
         <button type="submit" class="btn btn-outline-success btn-block">
           İşlemi Tamamla
         </button>
