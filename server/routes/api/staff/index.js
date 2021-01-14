@@ -17,17 +17,17 @@ const router = express.Router();
 
 //1) Çalışan Getir
 router.get("/", (req, res) => {
-  axios
-    .get(`${staffApiUrl}`)
-    .then((result) => {
-      res.json(result.data);
-    })
-    .catch((err) => {
-      res.status(404).send("Kişi verilerine ulaşılamadı");
-    });
+    axios
+        .get(`${staffApiUrl}`)
+        .then((result) => {
+            res.json(result.data);
+        })
+        .catch((err) => {
+            res.status(404).send("Kişi verilerine ulaşılamadı");
+        });
 });
 
-//2) Çalışşan Ekle
+//2) Çalışan Ekle
 router.post("/", (req, res) => {});
 
 //3) Çalışan Güncelle
