@@ -19,7 +19,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //1) Çalışan Getir
-app.get("/", (req, res) => {});
+app.get("/", (req, res) => {
+
+});
 
 //2) Çalışan Ekle
 app.post("/", (req, res) => {});
@@ -33,5 +35,5 @@ app.delete("/:id", (req, res) => {});
 const port = process.env.PORT || 8888;
 
 app.listen(port, () => {
-  console.log(`StaffApi başlatıldı => http://localhost:${port}/`);
+    console.log(`StaffApi başlatıldı => http://localhost:${port}/`);
 });

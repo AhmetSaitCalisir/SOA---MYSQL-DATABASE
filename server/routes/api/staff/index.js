@@ -28,7 +28,9 @@ router.get("/", (req, res) => {
 });
 
 //2) Çalışan Ekle
-router.post("/", (req, res) => {});
+router.post("/", (req, res) => {
+
+});
 
 //3) Çalışan Güncelle
 router.put("/:id", (req, res) => {});

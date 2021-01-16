@@ -30,8 +30,8 @@ router.get('/birimsecimi', (req, res) => {
 });
 
 //doktor gönder
-router.post('/doktorsecimi', (req, res) => {
-    let sql = `select cb.Ad from (birimler b join calisanbilgi cb on cb.BirimID=b.BirimID) where b.BirimAd='${req.body.BirimAd}'`;
+router.get('/doktorsecimi/:birimadi', (req, res) => {
+    let sql = `select cb.Ad from (birimler b join calisanbilgi cb on cb.BirimID=b.BirimID) where b.BirimAd='${req.params.id}' and cb.UnvanID='1'`;
     let query = db.query(sql, (err, results) => {
         if (err) throw err;
         console.log('doktor seciniz');
@@ -41,6 +41,26 @@ router.post('/doktorsecimi', (req, res) => {
 });
 
 //ameliyat kaydı oluşturma
+router.post('/ekle', (req, res) => {
+    let bilgi = {};
+    let sql = `select cb.CalisanID,b.BirimID  from calisanbilgi cb,birimler b where b.BirimAD='${req.body.BirimAd}' and cb.Ad='${req.body.Ad}' `;
+    db.query(sql, (err, result) => {
+        if (err) throw err;
+
+        bilgi.BirimID = result[0].BirimID;
+        bilgi.CalisanID = result[0].CalisanID;
+        console.log('calisanID:', bilgi.CalisanID);
+        console.log('birimID:', bilgi.BirimID);
+
+        let sqlEkle = `insert into ameliyatlar (AmeliyatTarih,AmeliyatAciklama,doktorID,birimID) values ('${req.body.Tarih}','${req.body.Aciklama}',${bilgi.CalisanID},${bilgi.BirimID})`;
+        db.query(sqlEkle, (err, result) => {
+            if (err) throw err;
+            console.log('ameliyat kaydı oluşturuldu.');
+        })
+
+    })
+
+})
 
 
 module.exports = router;
