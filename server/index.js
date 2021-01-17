@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-    res.send("MERHABA DÜNYA");
+  res.send("MERHABA DÜNYA");
 });
 
 app.use("/staff", staffApi);
@@ -20,5 +20,5 @@ app.use("/employment", employmentApi);
 const port = process.env.PORT || 4545;
 
 app.listen(port, () => {
-    console.log(`Server başlatıldı => http://localhost:${port}/`);
+  console.log(`Server başlatıldı => http://localhost:${port}/`);
 });
