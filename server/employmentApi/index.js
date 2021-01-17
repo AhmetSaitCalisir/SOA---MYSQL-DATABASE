@@ -3,17 +3,15 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const axios = require("axios");
 
+const ameliyat = require("./routes/ameliyat.js");
+const izin = require("./routes/izin.js");
+const nobet = require("./routes/nobet.js");
+
 /*
 YAPILMASI GEREKENLER
 
-1) Nöbet getir
-2) Nöbet ata
-3) Nöbet güncelle
-4) Nöbet sil
-5) Ameliyat getir
-6) Ameliyat ata
-7) Ameliyat güncelle
-8) Ameliyat sil
+1-Birimleri listele+
+
 */
 
 const databaseUrl = "http://localhost:3535/";
@@ -22,31 +20,28 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {});
+app.get("/", (req, res) => {
+  res.send("SELAM SANA İŞ İSTEYEN");
+});
 
-//1) Nöbet Getir
-app.get("/watch", (req, res) => {});
+//1-Birimleri listele
+app.get("/birim", (req, res) => {
+  axios
+    .get(`${databaseUrl}calisanbilgileri/birimsecimi`)
+    .then((result) => {
+      res.json(result.data);
+    })
+    .catch((err) => {
+      console.log("employment Api");
+      console.log("Birimler listelenirken bir hata meydana geldi");
+      console.log(err);
+      res.status(404).send("Birimler listelenirken bir hata meydana geldi");
+    });
+});
 
-//2) Nöbet Ata
-app.post("/watch", (req, res) => {});
-
-//3) Nöbet Güncelle
-app.put("/watch/:id", (req, res) => {});
-
-//4) Nöbet Sil
-app.delete("/watch/:id", (req, res) => {});
-
-//5) Ameliyat Getir
-app.get("/operation", (req, res) => {});
-
-//6) Ameliyat Ata
-app.post("/operation", (req, res) => {});
-
-//7) Ameliyat Güncelle
-app.put("/operation/:id", (req, res) => {});
-
-//8) Ameliyat Sil
-app.delete("/operation/:id", (req, res) => {});
+app.use("/ameliyat", ameliyat);
+app.use("/izin", izin);
+app.use("/nobet", nobet);
 
 const port = process.env.PORT || 9876;
 

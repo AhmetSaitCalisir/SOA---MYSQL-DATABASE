@@ -9,7 +9,7 @@
     "database": "nodemon database/index.js",
     "staffapi": "nodemon staffApi/index.js",
     "employmentapi": "nodemon employmentApi/index.js",
-    "rehber": "echo \nServer'ı çalıştırmak için => npm run dev\nDatabase'i çalıştırmak için => npm run database\nStaffApi'yi çalıştırmak için => npm run staffapi\nEmployeesApi'yi çalıştırmak için => npm run employeesapi"
+    "rehber": "echo \nServer'ı çalıştırmak için => npm run dev\nDatabase'i çalıştırmak için => npm run database\nStaffApi'yi çalıştırmak için => npm run staffapi\nEmployeesApi'yi çalıştırmak için => npm run employmentapi"
   },
   "author": "",
   "license": "ISC",
