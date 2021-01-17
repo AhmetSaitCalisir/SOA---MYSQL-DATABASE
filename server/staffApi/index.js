@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 //2-Id ile çalışanları listele
 app.get("/id/:id", (req, res) => {
   axios
-    .get(`${databaseUrl}calisanbilgileri/${req.params.id}`)
+    .get(`${databaseUrl}calisanbilgileri/id/${req.params.id}`)
     .then((result) => {
       res.json(result.data);
     })
