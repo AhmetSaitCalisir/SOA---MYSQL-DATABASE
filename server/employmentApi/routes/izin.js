@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
             res.json(result.data);
         })
         .catch((err) => {
-            console.log("employment izin");
+            console.log("employment Api izin");
             console.log("İzinler listelenirken hata meydana geldi");
             console.log(err);
             res.status(404).send("İzinler listelenirken hata meydana geldi");
@@ -34,7 +34,7 @@ router.get("/id/:id", (req, res) => {
             res.json(result.data);
         })
         .catch((err) => {
-            console.log("employment izin id");
+            console.log("employmentApi izin id");
             console.log(`${req.params.id} idli izin listelenirken hata meydana geldi`);
             console.log(err);
             res
@@ -61,7 +61,7 @@ router.post("/", (req, res) => {
             res.send("İzin atandı");
         })
         .catch((err) => {
-            console.log("employment izin ata");
+            console.log("employmentApi izin ata");
             console.log(`İzin atanırken hata meydana geldi`);
             console.log(err);
             res.status(400).send("İzin atanırken hata meydana geldi");
@@ -76,7 +76,7 @@ router.delete("/id/:id", (req, res) => {
             res.send("İzin iptal edildi");
         })
         .catch((err) => {
-            console.log("employment izin sil");
+            console.log("employmentApi izin sil");
             console.log("İzin ipta edilirken bir hatayla karşılaşıldı");
             console.log(err);
             res.status(400).send("İzin ipta edilirken bir hatayla karşılaşıldı");

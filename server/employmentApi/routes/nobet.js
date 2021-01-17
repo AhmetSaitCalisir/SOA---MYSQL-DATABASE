@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
         .get(`${databaseUrl}watch/list`)
         .then((result) => res.json(result.data))
         .catch((err) => {
-            console.log("employment nobet");
+            console.log("employmentApi nobet");
             console.log("Nöbetler listelenirken bir hata meydana geldi");
             console.log(err);
             res.status(404).send("Nöbetler listelenirken bir hata meydana geldi")
@@ -30,7 +30,7 @@ router.get("/id/:id", (req, res) => {
         .get(`${databaseUrl}watch/list/id/${req.params.id}`)
         .then((result) => res.json(result.data))
         .catch((err) => {
-            console.log("employment nobet id");
+            console.log("employmentApi nobet id");
             console.log("Nöbetler listelenirken bir hata meydana geldi");
             console.log(err);
             res.status(404).send("Nöbetler listelenirken bir hata meydana geldi")
@@ -44,7 +44,7 @@ router.post("/zaman", (req, res) => {
         .post(`${databaseUrl}watch/byDate`, { Tarih })
         .then((result) => res.json(result.data))
         .catch((err) => {
-            console.log("employment nobet tarih ile");
+            console.log("employmentApi nobet tarih ile");
             console.log("Tarihe göre nöbet getirilirken hata meydana geldi");
             console.log(err);
             res.status(404).send("Tarihe göre nöbet getirilirken hata meydana geldi");
@@ -64,7 +64,7 @@ router.post("/", (req, res) => {
             res.send("Nöbet Oluşturuldu");
         })
         .catch((err) => {
-            console.log("employment nobet oluştur");
+            console.log("employmentApi nobet oluştur");
             console.log("Nöbet oluşturulurken hata meydana geldi");
             console.log(err);
             res.status(400).send("Nöbet oluşturulurken hata meydana geldi");
@@ -77,7 +77,7 @@ router.delete("/id/:id", (req, res) => {
         .delete(`${databaseUrl}watch/delete/${req.params.id}`)
         .then((result) => res.send("Nöbet Silindi"))
         .catch((err) => {
-            console.log("employment nobet sil");
+            console.log("employmentApi nobet sil");
             console.log("Nöbet silinirken bir hatayla karşılaşıldı");
             console.log(err);
             res.status(400).send("Nöbet silinirken bir hatayla karşılaşıldı");

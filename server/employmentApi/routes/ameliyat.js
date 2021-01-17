@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
             res.json(result.data);
         })
         .catch((err) => {
-            console.log("employment ameliyat");
+            console.log("employment ameliyat Api");
             console.log("Ameliyatlar listelenirken bir hata meydana geldi");
             console.log(err);
 
@@ -34,7 +34,7 @@ router.get("/id/:id", (req, res) => {
             res.json(result.data);
         })
         .catch((err) => {
-            console.log("employment ameliyat id");
+            console.log("employment ameliyat Api id");
             console.log(`${req.params.id} idli ürün listelenirken bir hata meydana geldi`);
             console.log(err);
             res
@@ -59,7 +59,7 @@ router.post("/", (req, res) => {
             res.send("Ameliyat başarıyla eklendi");
         })
         .catch((err) => {
-            console.log("employment ameliyat kaydı");
+            console.log("employment ameliyat Api kaydı");
             console.log("Ameliyat eklenirken bir sorunla karşılaşıldı");
             console.log(err);
             res.status(400).send("Ameliyat eklenirken bir sorunla karşılaşıldı");
@@ -74,7 +74,7 @@ router.delete("/id/:id", (req, res) => {
             res.send("Ameliyat silindi");
         })
         .catch((err) => {
-            console.log("employment ameliyat sil");
+            console.log("employment ameliyat Api sil");
             console.log("Ameliyat Silinirken Hata Meydana geldi");
             console.log(err);
             res.status(400).send("Ameliyat Silinirken Hata Meydana geldi");
