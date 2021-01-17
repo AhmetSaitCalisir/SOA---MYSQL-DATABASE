@@ -1,12 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
-const calisanbilgi = require('./calisanbilgi');
-const login = require('./login');
-const operation = require('./operation');
-const watch = require('./watch');
-const dayoff = require('./dayoff');
+const calisanbilgi = require("./calisanbilgi");
+const login = require("./login");
+const operation = require("./operation");
+const watch = require("./watch");
+const dayoff = require("./dayoff");
 /*
 const mysql = require('mysql');
 
@@ -35,22 +35,21 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-    res.send('okey');
+  res.send("okey");
 });
 
 app.use("/calisanbilgileri", calisanbilgi);
 
-app.use('/login', login);
+app.use("/login", login);
 
-app.use('/operation', operation);
+app.use("/operation", operation);
 
-app.use('/watch', watch);
+app.use("/watch", watch);
 
-
-app.use('/dayoff', dayoff);
+app.use("/dayoff", dayoff);
 
 const port = process.env.PORT || 3535;
 
 app.listen(port, () => {
-    console.log(`Database başlatıldı => http://localhost:${port}/`);
+  console.log(`Database başlatıldı => http://localhost:${port}/`);
 });
